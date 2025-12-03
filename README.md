@@ -98,6 +98,8 @@ To enable telegram notifications, you'll need to take a few additional steps.
 
 You can clone the repository yourself and use Wrangler CLI to develop/deploy, extra list of things you need to take care of:
 
+- run `yarn deploy` to build and publish with `wrangler deploy` (Workers Sites does not support `wrangler versions upload`)
+
 - create KV namespace and add the `KV_STATUS_PAGE` binding to [wrangler.toml](./wrangler.toml)
 - create Worker secrets _\(optional\)_
   - `SECRET_SLACK_WEBHOOK_URL`
