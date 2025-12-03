@@ -134,3 +134,8 @@ worker/
 out/
 package-lock.json
 public/style.css
+
+# Yarn 4+ files
+.yarn/cache
+.yarn/install-state.gz
+.pnp.*
