@@ -29,6 +29,7 @@
     "tailwindcss": "^2.0.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
+    "wrangler": "^3.101.0",
     "yaml-loader": "^0.6.0"
   }
 }
