@@ -2,6 +2,7 @@ name = "cf-workers-status-page"
 workers_dev = true
 main = "index.js"
 compatibility_date = "2021-07-23"
+account_id = "<your_account_id>"
 
 [triggers]
 crons = ["* * * * *"]
@@ -9,8 +10,10 @@ crons = ["* * * * *"]
 [site]
 bucket = "out"
 
-# uncomment and adjust following if you are not using GitHub Actions
-#[env.production]
-#kv-namespaces = [{binding="KV_STATUS_PAGE", id="xxxx", preview_id=""}]
-#zone_id="xxx"
-#route="xxx"
+[env.production]
+kv_namespaces = [
+  { binding = "KV_STATUS_PAGE", id = "<kv_namespace_id>", preview_id = "<kv_preview_id>" }
+]
+# Set these if you deploy to a custom domain instead of workers.dev
+# zone_id = "<your_zone_id>"
+# route = "<your_route>"

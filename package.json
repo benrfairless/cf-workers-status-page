@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "flareact dev",
     "build": "yarn css && flareact build",
-    "deploy": "yarn build && flareact publish",
+    "deploy": "yarn build && wrangler deploy",
     "kv-gc": "node ./src/cli/gcMonitors.js",
     "format": "prettier --write '**/*.{js,css,json,md}'",
     "css": "postcss public/tailwind.css -o public/style.css"
@@ -29,6 +29,7 @@
     "tailwindcss": "^2.0.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
+    "wrangler": "^4.51.0",
     "yaml-loader": "^0.6.0"
   }
 }
